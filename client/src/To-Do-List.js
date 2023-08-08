@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import {Card, Header, Form, Input, Icon} from "semantic-ui-react";
-import querystring from "querystring";
+
 
 let endpoint = "http://localhost:9000";
 
@@ -20,7 +20,7 @@ class ToDoList extends Component {
 
     onChange = (event) => {
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
         });
     };
 
@@ -73,7 +73,7 @@ class ToDoList extends Component {
                                     />
                                     <span style={{paddingRight: 10}}>Done</span>
                                     <Icon
-                                    name="check circle"
+                                    name="undo alternate"
                                     color="yellow"
                                     onClick={()=> this.undoTask(item._id)}
                                     />
